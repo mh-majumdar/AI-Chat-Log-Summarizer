@@ -1,6 +1,6 @@
 from flask import Flask
 from flask_login import LoginManager
-from extensions import db
+from .extensions import db
 
 DB_NAME = "database.db"
 
@@ -13,12 +13,9 @@ def create_app():
    
 
     # Register blueprints
-    from .views import views
-    from .auth import auth
+   
 
-    app.register_blueprint(views, url_prefix="/")
-    app.register_blueprint(auth, url_prefix="/")
-    app.register_blueprint(views, url_prefix="/", name="home")
+   
 
 
     # Create database
