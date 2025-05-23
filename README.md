@@ -24,10 +24,9 @@
 
 ## Technologies Used
 
-- Frontend: HTML5, CSS3, Bootstrap 5, Bootstrap Icons  
-- Backend: (Specify your backend stack here, e.g., Flask, Django, Node.js)  
-- AI Summarization: (Specify AI library or API used)  
-- JavaScript for interactivity and form validation  
+- Frontend: HTML5, CSS3, Bootstrap 5 
+- Backend: Python, Flask
+- AI Summarization: nltk
 
 ---
 
@@ -67,22 +66,12 @@
 
 ---
 
-## Contributing
 
-Contributions, issues, and feature requests are welcome!  
-Feel free to check the [issues page](https://github.com/yourusername/ai-chat-log-summarizer/issues).
 
----
-
-## License
-
-This project is licensed under the MIT License — see the [LICENSE](LICENSE) file for details.
-
----
 
 ## Contact
 
-Created by [Your Name] - feel free to reach out via [your.email@example.com] or [LinkedIn](https://linkedin.com/in/yourprofile).
+Created by [Meehdi Hasan] - feel free to reach out via [mh.majumdar1952@gmail.com or [LinkedIn]([https://linkedin.com/in/yourprofile](https://www.linkedin.com/in/hasanmehedi1952/)).
 
 ---
 
