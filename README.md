@@ -6,7 +6,7 @@
 ---
 
 ## Features
-
+- **Secure authentication system
 - **Upload chat log files (.txt)** for AI-powered summarization  
 - **Smart analysis** that captures key points and themes  
 - **Detailed message statistics**, including total, user, and AI messages  
@@ -16,8 +16,8 @@
 ---
 
 ## Demo
-![Homepage](Homepage.png)
-![Output](output.png)
+<img src="Homepage.png" alt="Homepage" width="600" />
+<img src="Output.png" alt="Output" width="600" />
 
   
 *(Include a screenshot or GIF of the app interface here)*
