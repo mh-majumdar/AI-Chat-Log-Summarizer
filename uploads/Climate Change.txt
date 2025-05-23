@@ -1,0 +1,43 @@
+User: What exactly is climate change?
+
+AI: Climate change refers to long-term shifts in temperatures and weather patterns, mainly caused by human activities like burning fossil fuels.
+
+User: Isn't climate change just natural variation?
+
+AI: While Earth’s climate does change naturally, current changes are occurring much faster due to human actions, especially since the industrial revolution.
+
+User: What are the main causes?
+
+AI: The primary driver is the greenhouse effect — gases like carbon dioxide, methane, and nitrous oxide trap heat in the atmosphere.
+
+User: Where do those gases come from?
+
+AI: Mostly from burning coal, oil, and gas for energy, deforestation, agriculture, and industrial processes.
+
+User: What kind of impact does this have?
+
+AI: Rising sea levels, more extreme weather events, heatwaves, droughts, biodiversity loss, and threats to food and water security.
+
+User: Is it affecting people right now?
+
+AI: Yes. Many communities are already experiencing floods, wildfires, and crop failures linked to climate change.
+
+User: What can we do to stop it?
+
+AI: We need to reduce greenhouse gas emissions by switching to renewable energy, improving energy efficiency, and protecting forests.
+
+User: Does individual action make a difference?
+
+AI: Absolutely. Choices like using less energy, eating sustainably, and supporting climate policies help build momentum for broader change.
+
+User: What about governments and industries?
+
+AI: Their role is critical. Policies, innovation, and investment from both sectors are necessary to drive large-scale reductions in emissions.
+
+User: Is there hope we can fix this?
+
+AI: Yes, but time is short. If we act decisively now, we can avoid the worst outcomes and create a more sustainable future.
+
+User: Where can I learn more?
+
+AI: Trusted sources include the IPCC reports, NASA’s climate site, and organizations like the UNFCCC or Project Drawdown.

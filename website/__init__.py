@@ -5,6 +5,7 @@ from flask_mail import Mail
 from flask_apscheduler import APScheduler
 from datetime import datetime
 from .models import User
+import os
 
 
 DB_NAME = "database.db"
@@ -13,8 +14,13 @@ def create_app():
     app = Flask(__name__)
     app.config['SECRET_KEY'] = "helloworld"
     app.config['SQLALCHEMY_DATABASE_URI'] = f'sqlite:///{DB_NAME}'
-    db.init_app(app)
 
+
+
+    UPLOAD_FOLDER = 'uploads'
+    app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
+    os.makedirs(UPLOAD_FOLDER, exist_ok=True)
+    db.init_app(app)
     # Register blueprints
     from .views import views
     from .auth import auth

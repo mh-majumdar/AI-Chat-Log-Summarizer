@@ -1,0 +1,14 @@
+Dear Hiring Manager,
+
+I am writing to express my strong interest in the software engineer position at FiftyTwo Digital Ltd. With a Bachelor's degree in Information and Communication Engineering from Noakhali Science and Technology University, I have a solid foundation in Python and related technologies.
+
+My experience includes developing a Weather Forecasting application using NumPy and Pandas, and proficiency in C, C++, Flask, and Django. I have actively honed my problem-solving skills through platforms like Codeforces, CodeChef, and LeetCode.    
+
+
+During my internship at Business Automation Ltd., I gained practical software development experience. I am also proficient in frontend technologies including HTML, CSS, and Bootstrap, as demonstrated by my portfolio.
+
+
+I am eager to contribute my skills and learn more at your company. Thank you for your time and consideration. I have attached my resume and welcome the opportunity to discuss my qualifications.
+
+Sincerely,
+Mehedi Hasan

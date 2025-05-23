@@ -1,11 +1,209 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>AI Chat Log Summarizer</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='index.css') }}"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   </head>
   <body>
-    <h1>I am Mehedi Hasan</h1>
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button
+            type="button"
+            class="navbar-toggle collapsed"
+            data-toggle="collapse"
+            data-target="#navbar-collapse"
+          >
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#"
+            ><span class="brand-icon">🤖</span> Chat Summarizer</a
+          >
+        </div>
+        <div class="collapse navbar-collapse" id="navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#summarize">Summarize</a></li>
+            <li><a href="#summary">Summary</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li>
+              <a href="{{ url_for('auth.logout') }}">
+                <span class="glyphicon glyphicon-log-out"></span> Logout
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-section">
+      <div class="hero-overlay">
+        <div class="hero-content">
+          <div class="container text-center">
+            <h1 class="hero-title">AI Chat Log Summarizer</h1>
+            <p class="hero-subtitle">
+              Transform your chat conversations into intelligent summaries with
+              advanced AI analysis
+            </p>
+            <div class="hero-features">
+              <span class="feature-tag">✨ Smart Analysis</span>
+              <span class="feature-tag">📊 Detailed Statistics</span>
+              <span class="feature-tag">🔍 Keyword Extraction</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <div class="container">
+        <!-- Upload Section -->
+        <section id="summarize" class="upload-section">
+          <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+              <div class="upload-card">
+                <div class="card-header">
+                  <h2>
+                    <span class="glyphicon glyphicon-upload"></span> Upload Chat
+                    Log
+                  </h2>
+                  <p class="text-muted">
+                    Upload your chat log file (.txt format) to get an AI-powered
+                    summary
+                  </p>
+                </div>
+                <div class="card-body">
+                  <form
+                    method="post"
+                    enctype="multipart/form-data"
+                    class="upload-form"
+                  >
+                    <div class="file-input-wrapper">
+                      <input
+                        type="file"
+                        name="chatfile"
+                        id="chatfile"
+                        accept=".txt"
+                        required
+                        class="file-input"
+                      />
+                      <label for="chatfile" class="file-label">
+                        <span class="glyphicon glyphicon-folder-open"></span>
+                        <span class="file-text"
+                          >Choose file or drag and drop</span
+                        >
+                      </label>
+                    </div>
+                    <button
+                      type="submit"
+                      class="btn btn-primary btn-lg btn-upload"
+                    >
+                      <span class="glyphicon glyphicon-cog"></span>
+                      Upload & Summarize
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Results Section -->
+        {% if summary %}
+        <section id="summary" class="results-section">
+          <div class="row">
+            <!-- Summary Column -->
+            <div class="col-md-8">
+              <div class="result-card">
+                <div class="card-header">
+                  <h3>
+                    <span class="glyphicon glyphicon-file-text"></span> Summary
+                  </h3>
+                </div>
+                <div class="card-body">
+                  <div class="summary-content">{{ summary }}</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Statistics Column -->
+            <div class="col-md-4">
+              <div class="result-card">
+                <div class="card-header">
+                  <h4>
+                    <span class="glyphicon glyphicon-stats"></span> Statistics
+                  </h4>
+                </div>
+                <div class="card-body">
+                  <div class="stats-grid">
+                    <div class="stat-item">
+                      <span class="stat-value">{{ stats['total'] }}</span>
+                      <span class="stat-label">Total Messages</span>
+                    </div>
+                    <div class="stat-item">
+                      <span class="stat-value">{{ stats['user'] }}</span>
+                      <span class="stat-label">User Messages</span>
+                    </div>
+                    <div class="stat-item">
+                      <span class="stat-value">{{ stats['ai'] }}</span>
+                      <span class="stat-label">AI Messages</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="result-card">
+                <div class="card-header">
+                  <h4>
+                    <span class="glyphicon glyphicon-tags"></span> Top Keywords
+                  </h4>
+                </div>
+                <div class="card-body">
+                  <div class="keywords-list">
+                    {% for word, count in keywords %}
+                    <div class="keyword-item">
+                      <span class="keyword-word">{{ word }}</span>
+                      <span class="keyword-count">{{ count }}</span>
+                    </div>
+                    {% endfor %}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        {% endif %}
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="text-center">
+          <p>
+            &copy; 2024 AI Chat Log Summarizer. Powered by advanced AI
+            technology.
+          </p>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
