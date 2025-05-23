@@ -17,7 +17,7 @@
 
 ## Demo
 
-![Screenshot](./screenshot.png)  
+  
 *(Include a screenshot or GIF of the app interface here)*
 
 ---
@@ -71,7 +71,7 @@
 
 ## Contact
 
-Created by [Meehdi Hasan] - feel free to reach out via [mh.majumdar1952@gmail.com or [LinkedIn]([https://linkedin.com/in/yourprofile](https://www.linkedin.com/in/hasanmehedi1952/)).
+Created by [Meehdi Hasan] - feel free to reach out via [mh.majumdar1952@gmail.com] or [LinkedIn]([https://linkedin.com/in/yourprofile](https://www.linkedin.com/in/hasanmehedi1952/)).
 
 ---
 
